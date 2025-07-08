@@ -38,12 +38,12 @@ echo "Setup: Creating indices..."
 java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.CreateIndices &
 JAVA_PID=$!
 wait "$JAVA_PID"
-JAVA_PID="
+JAVA_PID=""
 
 echo "Setup: Loading event records..."
 java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.ImportUmeaRecordsToStore &
 JAVA_PID=$!
 wait "$JAVA_PID"
-JAVA_PID="
+JAVA_PID=""
 
 echo "Setup complete!"

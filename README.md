@@ -55,7 +55,7 @@ To run the umea-neo4j-wrapper image, we must also mount bind a number of ports a
 
 ```sh
 # In a terminal (Windows/macOS/Linux)
-docker run --rm --network umea-neo4j-net -p 7474:7474 -p 7687:7687 -v <data_dir>:/data -v <logs_dir>:/logs  -v ~/.ssh:/root/.ssh umea-neo4j-wrapper:latest
+docker run --rm --name umea-neo4j --network umea-neo4j-net -p 7474:7474 -p 7687:7687 -v <data_dir>:/data -v <logs_dir>:/logs  -v ~/.ssh:/root/.ssh umea-neo4j-wrapper:latest
 ```
 
 Where:
@@ -67,4 +67,6 @@ Where:
     - Once again, can be ommitted if no intention to access or persist beyond initial run.
 - `--rm` - instructs to remove the container files after container finishes running.
 - `--network umea-neo4j-net` - makes the container accessible on the `umea-neo4j-net` Docker network.
+- `--name umea-neo4j` - sets name of container to `umea-neo4j`
+    - Note: If using with the [population-linkage repository](https://github.com/stacs-srg/population-linkage), you will need to pass the name of this container as an environment variable to the population-linkage container.
 - Assumes your RSA encrypted PEM private key is installed in the default ssh directory (`~/.ssh`).

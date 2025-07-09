@@ -12,4 +12,8 @@ COPY data-umea-1.0-SNAPSHOT-jar-with-dependencies.jar ./data-umea.jar
 COPY src ./src
 COPY docker/entrypoint.sh .
 
+# Ports which should be bound when running
+EXPOSE 7474
+EXPOSE 7687
+
 ENTRYPOINT ["./entrypoint.sh"]

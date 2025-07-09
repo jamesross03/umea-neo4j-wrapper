@@ -68,5 +68,5 @@ Where:
 - `--rm` - instructs to remove the container files after container finishes running.
 - `--network umea-neo4j-net` - makes the container accessible on the `umea-neo4j-net` Docker network.
 - `--name umea-neo4j` - sets name of container to `umea-neo4j`
-    - Note: If using with the [population-linkage repository](https://github.com/stacs-srg/population-linkage), you will need to pass the name of this container as an environment variable to the population-linkage container.
+    - Note: If using with the [population-linkage repository](https://github.com/stacs-srg/population-linkage), this will by default expect the name to be `umea-neo4j`. If you change this, you'll need to pass the name of this container as an environment variable to the population-linkage container.
 - Assumes your RSA encrypted PEM private key is installed in the default ssh directory (`~/.ssh`).

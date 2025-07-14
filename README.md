@@ -1,6 +1,8 @@
 # UMEA Neo4J Wrapper
 This repository contains a portable, deployable, wrapper for a Neo4J database of the Swedish UMEA dataset. To use this container, you must have an existing JAR file of the Swedish UMEA dataset and an authorised key-pair to access it.
 
+Intended for use with the [stacs-srg "population linkage" repository](https://github.com/stacs-srg/population-linkage).
+
 ## 1. Prerequisites
 The following tools must be installed on your system to follow this guide:
 - [Git](https://git-scm.com/)

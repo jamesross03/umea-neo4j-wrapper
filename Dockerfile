@@ -1,5 +1,5 @@
 # Use Neo4J image (5+ for cleaner commands)
-FROM neo4j:5.20
+FROM neo4j:5.26.9
 
 # Set working directory inside the container
 WORKDIR /app

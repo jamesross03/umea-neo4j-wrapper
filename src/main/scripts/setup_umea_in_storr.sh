@@ -35,13 +35,13 @@ until cypher-shell -a bolt://localhost:7687 -u neo4j -p "" "RETURN 1" >/dev/null
 done
 
 echo "Setup: Creating indices..."
-java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.CreateIndices &
+java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.CreateIndices > /dev/stdout 2>&1 &
 JAVA_PID=$!
 wait "$JAVA_PID"
 JAVA_PID=""
 
 echo "Setup: Loading event records..."
-java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.ImportUmeaRecordsToStore &
+java -cp $JAR_PATH uk.ac.standrews.cs.data.umea.store.ImportUmeaRecordsToStore > /dev/stdout 2>&1 &
 JAVA_PID=$!
 wait "$JAVA_PID"
 JAVA_PID=""
